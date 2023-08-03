@@ -2,104 +2,87 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descrption" content="Aoi's Kitchen監修のオリジナルのおうちレシピサイトです。">
-    <meta name="keywords" content="レシピ, レシピサイト, recipe, recipe cite, おうちレシピ, 自炊, 献立, 和食, 洋食, 中華">
-    <title>おうちレシピ</title>
-    <!-- この下にプラグインのcssの読み込み-->
-    <link rel="stylesheet" type="text/css" href="../js/slick/slick.css"/>
-    
-    <!-- ↓ページ固有のCSSを読み込み -->
-    <link rel="stylesheet" href="../css/style.css">
+    <title>レシピ　お問い合わせ</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon-180x180.png">
+    <link rel="stylesheet" href="../curryrice/css/basic.css">
+    <link rel="stylesheet" href="../curryrice/css/style.css">
 
-    <!-- ↓jQuery本体読み込み（先）-->
-    <script src="../js/jquery-3.6.3.min.js"></script>
-
-    <!-- この下にプラグインのjsの読み込み -->
-    <script type="text/javascript" src="../js/slick/slick.min.js"></script>
-
-    <!-- この下に自作のjsの読み込み（後） -->
-    <script src="../js/script.js"></script>
-
-    <!-- ファビコンの設定 -->
-    <link rel="shortcut icon" href="../images/favicon.ico">
-
-    <!-- appletouchiconの設定 -->
-    <link rel="shortcut icon" href="../images/apple-touch-icon-180x180.png">
-
-</head> <!--./head-->
-
+</head>
 <body>
-    <div class="inner">
-    <header class="bg-color">
-        <div class="inner flex">
-            <h1><img src="../images/logo_header.png" alt="なべのロゴ"></h1>
-            <p class="title_header"><img src="../images/title_header.png" alt="おうちレシピ"></p>
-            <p class="insta"><img src="../images/insta_header.png" alt="instagramのアイコン"></p>
+    <article>
+        <header>
+          <h1>お問い合わせ</h1>
+        </header>
+        <div>
+          <p class="question">
+            レシピやその他質問事項に関してお問い合わせがある方は、<br>
+            以下の項目を記入の上、送信ボタンをクリックください。
+          </p>
         </div>
-    </header><!--./header-->
+            <section class="section">
+                
+                <!-- フォーム -->
+                <form action="">
+                <!-- お名前 -->
+                <div class="form-group">
+                  <!-- 項目名 -->
+                  <label for="yourName" class="form-label">お名前</label>
+                  <div class="form-col">
+                  <!-- 入力欄：テキスト -->
+                  <input type="text" name="お名前" id="yourName">
+                  </div>
+                </div>
+                
+                <!-- E-Mail -->
+                <div class="form-group">
+                  <!-- 項目名 -->
+                  <label for="yourEmail" class="form-label">E-Mail</label>
+                  <div class="form-col">
+                  <!-- 入力欄：email -->
+                  <input type="email" name="E-Mail" id="yourEmail">
+                  </div>
+                </div>
+                <!-- emailのdiv end -->
+                
+                <!-- お問い合わせ内容 -->
+                <div class="form-group">
+                  <!-- 項目名 -->
+                  <label for="yourInquiry" class="form-label">お問い合わせ内容</label>
+                  <div class="form-col">
+                  <!-- 入力欄：テキストエリア -->
+                  <textarea name="お問い合わせ内容" id="yourInquiry" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
 
-   </div>
-    <div class="mv_photo slide ">
-        <img src="../images/fv-100.jpg" alt="料理プレートの写真">
-        <img src="../images/fv02.jpg" alt="おにぎりと味噌汁の写真">
-        <img src="../images/fv03.jpg" alt="カレーライスとプレートの写真">    
-    </div>
+                </div>
+                
+                <!-- 送信ボタン -->
+                <div class="form-btn">
+                  <button type="submit"><img src="images/submit_btn.jpg" alt="送信する"></button>
+                </div>
+                </form>
+                <!-- フォームここまで -->
+                </section>
+                <!-- セクションここまで -->
+                </main>
+         </div>
+        <div class="btnArea">
+          <p class="btn"><a href="#">『澤田家のおうちごはんレシピ』のご購入はこちら</a></p>
+          
+        </div>
+      </article>
 
-    <!-- ハンバーガーメニューを書く際に便利な機能
-　　　　・inputタグとlabelタグを結びつけるために
-　　　　　①inputタグにid属性を記述　②labelタグにfor属性を追加
-    　　・チェックボックスを非表示にするためにクラス名を追加-->
+      <footer>
+      <div class="pagination">
+        <address>レシピの一覧は<a href="#">こちら</a></address>
+        <p><small>&copy:2023 Aoi's Kitchen</small></p>
+      </footer>
 
-    <input type="checkbox" name="navToggle" id="navToggle" class="nav-toggle">
-    <label for="navToggle" class="btn-burger"></label>
-
-   <nav class="nav">
-    <ul class="inner flex nav_list">
-        <li><a href="../index.html">HOME</a></li>
-        <li><a href="../html&css/index.html">HTML&CSS</a></li>
-        <li class="current">Ai＆Ps</li>
-        <li><a href="../webflow/index.html">WebFlow</a></li>
-        <li><a href="../jQuery/index.html">JQuery</a></li>
-        <li><a href="../works/">Works</a></li>
-    </ul>
-    </nav>
-
-<!-- main -->
-<main>
-   
-</main> <!--./main-->
-
-
-<footer class="bg-color ">
-    <div class="flex inner footer-logo">
-        <div class="logo-footer"><img src="../images/logo-8.png" alt="なべのロゴ"></div>
-        <p class="title"><img src="../images/footer_title.png" alt="おうちレシピ"></p>
-        <p class="insta">
-            <span>公式instagram</span>
-            <a href="#"><img src="../images/footer_insta-8.png" alt="instagramのアイコン"></a>
-        </p>
-    </div><!--./flex  -->
-    
-    <ul class="sitemap inner flex">
-        <li><a href="../index.html">HOME</a></li>
-        <li><a href="../html&css/index.html">HTML＆CSS</a></li>
-        <li><a href="#">Ai＆Ps</a></li>
-        <li><a href="../webflow/index.html">WebFlow</a></li>
-        <li><a href="../jQuery/index.html">JQuery</a></li>
-        <li><a href="../works/">Works</a></li>
-    </ul>
-    <div class="inner">
-        <p class="copyright">
-            <small>&copy;2023 ouchi recipe by Aoi's Kitchen</small>
-        </p>
-    </div>
-
-    <div class="to-top">
-        <a href="#"><img src="../images/top_bacK-8.png" alt="ページのトップに戻る"></a>
-    </div>
-</footer><!--./footer-->
-
-    
+      </body>
+      </html>
+      
 </body>
 </html>
