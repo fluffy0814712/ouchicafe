@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descrption" content="Aoi's Kitchen監修のオリジナルのおうちレシピサイトです。">
+    <meta name="keywords" content="レシピ, レシピサイト, recipe, recipe cite, おうちレシピ, 自炊, 献立, 和食, 洋食, 中華">
+    <title>おうちレシピ</title>
+    <!-- この下にプラグインのcssの読み込み-->
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    
+    <!-- ↓ページ固有のCSSを読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ↓jQuery本体読み込み（先）-->
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+    <!-- この下にプラグインのjsの読み込み -->
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+    <!-- この下に自作のjsの読み込み（後） -->
+    <script src="js/script.js"></script>
+
+    <!-- ファビコンの設定 -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- appletouchiconの設定 -->
+    <link rel="shortcut icon" href="images/apple-touch-icon-180x180.png">
+
+</head> <!--./head-->
+
+<body>
+    <div class="inner">
+    <header class="bg-color">
+        <div class="inner flex">
+            <h1><img src="images/logo_header.png" alt="なべのロゴ"></h1>
+            <p class="title_header"><img src="images/title_header.png" alt="おうちレシピ"></p>
+            <p class="insta"><img src="images/insta_header.png" alt="instagramのアイコン"></p>
+        </div>
+    </header><!--./header-->
+
+   </div>
+    <div class="mv_photo slide ">
+        <img src="images/fv-100.jpg" alt="料理プレートの写真">
+        <img src="images/fv02.jpg" alt="おにぎりと味噌汁の写真">
+        <img src="images/fv03.jpg" alt="カレーライスとプレートの写真">    
+    </div>
+
+    <!-- ハンバーガーメニューを書く際に便利な機能
+　　　　・inputタグとlabelタグを結びつけるために
+　　　　　①inputタグにid属性を記述　②labelタグにfor属性を追加
+    　　・チェックボックスを非表示にするためにクラス名を追加-->
+
+    <input type="checkbox" name="navToggle" id="navToggle" class="nav-toggle">
+    <label for="navToggle" class="btn-burger"></label>
+
+   <nav class="nav">
+    <ul class="inner flex nav_list">
+        <li class="current">HOME</li>
+        <li><a href="html&css/index.html">HTML&CSS</a></li>
+        <li><a href="ai&ps/index.html">Ai＆Ps</a></li>
+        <li><a href="webflow/index.html">WebFlow</a></li>
+        <li><a href="jQuery/index.html">JQuery</a></li>
+        <li><a href="works/index.html">Works</a></li>
+    </ul>
+    </nav>
+
+<!-- main -->
+<main>
+    <section class="topics">
+        <div class="inner">
+            <h2>Topics</h2>
+            <div class="news">
+                <dl class="flex">
+                    <dt>
+                        2023.6.9  
+                    </dt>
+                    <dd>
+                        <span class="link"><a href="#">レシピサイト</a></span>公開のお知らせ
+                    </dd>
+                </dl>
+                <dl class="flex">
+                    <dt>
+                        2023.3.21 
+                    </dt>
+                    <dd>
+                        <span class="link"><a href="#">レシピ本</a></span>発売開始のお知らせ
+                    </dd>
+                </dl>
+            </div>
+            <p class="read-more"><a href="#">もっと見る </a></p>
+        </div><!--./.inner-->
+    </section> <!--./.topics-->
+
+    <section class="recipes">
+        <div class="inner">
+            <h2>Recipes</h2>
+            <p class="text">
+                おうちで簡単に作れる料理をカテゴリー別にまとめています。<br>
+                毎日の食事のレシピの参考にぜひご覧ください。
+            </p>
+            <div class="image">
+                <ul class="flex food">
+                    <li><a href="#"><img src="images/japan-8.png" alt="和食"></a></li>
+                    <li><a href="#"><img src="images/western-8.png" alt="洋食"></a></li>
+                    <li><a href="#"><img src="images/chinese-8.png" alt="中華"></a></li>
+                </ul>
+                <p class="more"><a href="#">もっと見る</a></p>
+            </div>
+        </div><!--./.inner-->
+    </section><!--./.recipes-->
+
+    <section class="ranking">
+        <div class="inner">
+            <h2>Ranking</h2>
+            <p class="text">
+                保存の多かったレシピをランキング形式で更新しています。<br>
+                ※毎週金曜日１０時に更新しています。
+            </p>
+            <div class="image">
+                <ul class="flex food">
+                    <li><a href="curryrice/index.html"><img src="images/no1-8.png" alt="1位:カレー"></a></li>
+                    <li><a href="nikujyaga/index.html"><img src="images/no2-8.png" alt="2位:肉じゃが"></a></li>
+                    <li><a href="#"><img src="images/no3-8.png" alt="3位:ハンバーグ"></a></li>
+                </ul>
+                <p class="more"><a href="#">もっと見る</a></p>
+            </div>
+        </div><!--./.inner-->
+    </section><!--./.recipes-->
+</main> <!--./main-->
+
+
+<footer class="bg-color ">
+    <div class="flex inner footer-logo">
+        <div class="logo-footer"><img src="images/logo-8.png" alt="なべのロゴ"></div>
+        <p class="title"><img src="images/footer_title.png" alt="おうちレシピ"></p>
+        <p class="insta">
+            <span>公式instagram</span>
+            <a href="#"><img src="images/footer_insta-8.png" alt="instagramのアイコン"></a>
+        </p>
+    </div><!--./flex  -->
+    
+    <ul class="sitemap inner flex">
+        <li><a href="#">HOME</a></li>
+        <li><a href="html&css/index.html">HTML＆CSS</a></li>
+        <li><a href="ai&ps/index.html">Ai＆Ps</a></li>
+        <li><a href="webflow/index.html">WebFlow</a></li>
+        <li><a href="jQuery/index.html">JQuery</a></li>
+        <li><a href="works/index.html">Works</a></li>
+    </ul>
+    <div class="inner">
+        <p class="copyright">
+            <small>&copy;2023 ouchi recipe by Aoi's Kitchen</small>
+        </p>
+    </div>
+
+    <div class="to-top">
+        <a href="#"><img src="images/top_bacK-8.png" alt="ページのトップに戻る"></a>
+    </div>
+</footer><!--./footer-->
+
+    
+</body>
+</html>
