@@ -1,0 +1,789 @@
+@charset "UTF-8";
+
+/* リセットの記述 */
+body,h1,h2,h3,h4,p,ul,dl,dd{
+   margin:0;
+   padding:0;
+   list-style:none;
+} 
+
+img{
+    vertical-align: bottom;
+} /* imgの隙間がなくなる */
+
+a{
+    text-decoration: none; /* テキストの下線がなくなる */
+    color:#333; /* リンクの文字が白くなる */ 
+}  
+
+*{
+    box-sizing: border-box;
+}
+
+/* 初期設定 */
+body{
+    font-size:16px;
+    line-height:1;   /* fontの間隔はデフォルトのそのままにしておく */
+    font-family:"UD デジタル 教科書体 N-R",YuGothic,"游ゴシック体","Yu Gothic", "游ゴシック",Arial,"メイリオ", Meiryo, "Hiragino Kaku Gothic Pro",
+    "ヒラギノ角ゴ　ProN", sans-serif;
+    font-weight:500; /* fontの太さが少し濃くなる */
+    color:#333; 
+    background-color:#f6f2e9; /* 背景のカラーの初期設定を無しにしておく */
+}
+
+/* 使いまわしのクラス指定 */
+.inner{
+    max-width: 960px; /* 一番最大の幅が960にしておく */ 
+    margin:0 auto;
+}
+
+/* ここでinnerクラスをhtmlに記述していく */
+.flex{
+    display:flex;
+    justify-content: space-between;
+}
+/* 横並びの記述を行う */
+/* 必要なところにflexの記述を行う */
+
+/*headerとfooterのカラー指定  */
+.bg-color{
+    background:#fff;/* 背景色の設定*/
+    color:#c08060; 
+}
+
+header.bg-color{
+    background-color: #f6f2e9;
+}
+/* ここで指定のエリアにbg-colorのクラス名追加 */
+
+/* ヘッダーの記述 */
+header{
+    padding:10px 0 5px 0; /* 上　右　下　左 */
+    width:100%;
+    /* position:fixed;  */
+    /* top:0;  */
+    /* left:0; */ 
+    /* z-index: */
+}
+
+header h1{
+    margin-bottom:1px;
+}
+
+header.flex{
+    align-items:center; /* 縦位置の中央ぞろえ */
+}
+
+header .title_header{ 
+     margin-top:10px; 
+} 
+
+header .insta{
+    margin-top:30px;
+}
+/* リンクをくりっくしたときの時間 */
+header ul li a{
+    transition: all 0.2s ;
+}
+
+/* top画像の設定部分 */
+.mv_photo{
+    text-align: center; 
+    /* padding-top:218px; */
+    position:relative;
+}
+
+.mv_photo img{
+    width:100%;
+}
+
+/* グローバルナビゲーション */
+
+nav{
+    /* スティッキーヘッダーの記述 */
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+nav ul li{
+    width:160px;
+    text-align: center;
+    font-size:16px;
+    line-height:2em;
+    border-left:3px solid #bec2ae;
+    /* border-right:3px solid #bec2ae; */
+    border-top:3px solid #bec2ae;
+    border-bottom:3px solid #bec2ae ;
+    background-color:#fff;
+    align-items: center;
+    position:sticky;
+}
+
+nav ul li:last-child{
+    border-right:3px solid #bec2ae;
+}
+
+/* hoverしたときの設定 */
+nav ul li a:hover{
+    background-color: #d6a654;
+    transition: all 0.2s;
+    color:#f6f2e9;
+}
+
+/* リンクの範囲を広げてあげる（UI的におすすめ） */
+nav ul li a{
+    display:block;
+}
+
+nav ul .current{
+    color:#f6f2e9;
+    background-color:#d6a654;
+    font-weight:bold ;
+}
+
+/* チェックボックスの非表示の設定 */
+.nav-toggle{
+    display: none;
+}
+
+/* topics セクション */
+h2{
+    color:#c08060;
+    font-size:40px;
+    text-align:center;
+    padding-top:57px;
+}
+
+.topics{
+    background: url(../images/bg_cloud.png) center center no-repeat;
+    height:417px;
+    margin-top:75px;
+}   
+
+.news{
+    text-align:center;
+    padding-top:57px;
+    margin:0 auto;
+    width:538px;
+}
+
+.news dl{
+    display:flex;
+    flex-wrap:wrap;
+    font-size:25px;
+    padding-bottom: 20px;
+}
+
+.news dt{
+    width:37px;
+}
+
+.news dd{
+    width:406px;
+}
+
+.link{
+    border-bottom: 1px solid #333;
+}
+
+.link a:hover{
+    transition: all 0.2s;
+    color:#c08060;
+    border-bottom:1px solid #c08060;
+}
+
+/* topicsセクションのボタンの設定 */
+
+.read-more{
+    font-size:16px;
+    text-align:center;
+    margin-top:50px; /*上に余白確保*/
+    padding-bottom:50px; /*下に余白確保*/
+    padding-right: 20px;
+}
+
+.read-more a{
+    display: inline-block; /*幅と高さの指定をするため*/
+    width: 203px;
+    line-height:47px;
+    text-align: center;
+    font-weight: bold;
+    color:#c08060;
+    background-color: #fff;
+    border:3px solid #c08060;
+    border-radius: 90px;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+    transition:all 0.3s; /*hoverしたときに3秒後 離すときの設定もつけるために、こちらに書く*/
+}
+
+.read-more a:hover{
+    background-color:#c08060;
+    color:#f6f2e9;
+}
+
+.read-more a::after{
+    content: "";
+    display: inline-block;
+    width:10px;
+    height:10px;
+    border-top:2px solid #c08060;
+    border-right:2px solid #c08060;
+    margin-left:15px; /**/
+    transform: rotate(45deg);  /* 45度回転させる*/
+}
+
+/* レシピセクションとランキングセクションのボタンの設定 */
+
+.more{
+    font-size:16px;
+    text-align:right;
+    margin-top:50px; /*上に余白確保*/
+    padding-bottom:100px; /*下に余白確保*/
+    padding-right: 20px;    
+}
+
+.more a{
+    display: inline-block; /*幅と高さの指定をするため*/
+    width:203px;
+    line-height:47px;
+    text-align: center;
+    font-weight: bold;
+    color:#c08060;
+    background-color: #fff;
+    border:3px solid #c08060;
+    border-radius: 90px;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+    transition:all 0.3s; /*hoverしたときに3秒後 離すときの設定もつけるために、こちらに書く*/
+}
+
+.more a:hover{
+    background-color:#c08060;
+    color:#f6f2e9;
+}
+
+.more a::after{
+    content: "";
+    display: inline-block;
+    width:10px;
+    height:10px;
+    border-top:2px solid #c08060;
+    border-right:2px solid #c08060;
+    margin-left:15px; /**/
+    transform: rotate(45deg);  /* 45度回転させる*/
+}
+
+/* recipes セクション */
+.recipes{
+    margin-top:140px;
+    height:630px;
+}
+
+.text{
+    padding-top:50px;
+    font-size: 18px;
+    text-align:center;
+    padding-bottom:50px;
+}
+
+ul.food{
+    width:824px;
+    margin:0 auto;
+}
+
+.food a{
+     overflow:hidden;
+}
+
+.food a img:hover{
+	transform:scale(1.1);
+	transition:0.3s;
+}
+
+
+/* ranking セクション */
+.ranking{
+    margin-top:50px;
+    height:587px;
+    margin-bottom:100px;
+}
+
+/* footerセクション */
+footer{
+    padding:45px 0 75px 0;
+}
+footer.flex{
+    align-items:flex-end; /* 縦位置の下ぞろえ */ 
+}
+
+.title{
+    padding-top:59px;
+}
+
+/* instagram */
+.insta{
+    text-align:center;
+}
+
+/* インスタグラムの文字がインライン要素なので、ブロック要素に設定してあげる */
+.insta span{
+    display: block;
+    margin-bottom:25px;
+    margin-top:50px;
+}
+
+.sitemap{
+    margin-top:50px;
+    margin-bottom:25px;
+}
+
+footer ul li{
+    width:160px;
+    text-align: center;
+    font-size:15px;
+    color:#bec2ae;
+    line-height:2em;
+    border-left:3px solid #bec2ae;
+    background-color:#fefefe;
+    align-items: center;
+    margin-bottom:25px;
+}
+
+footer ul li:last-child{
+    border-right:3px solid #bec2ae;
+}
+
+footer ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.2s;
+    color:#bec2ae;
+}
+
+.copyright{
+    margin-top:70px;
+    text-align:center;
+}
+
+.copyright small{
+    font-size:16px;
+}
+
+.to-top{
+    position:fixed; /* 上にスクロールしてもずっと固定位置のまま設定できる */
+    right:50px;
+    bottom:75px;
+}
+
+
+/* 680px以下に適用されるCSS（スマホ用） */
+@media screen and (max-width: 600px) {
+    body{
+        font-size:12px;
+        line-height:1;   /* fontの間隔はデフォルトのそのままにしておく */
+        font-family:"UD デジタル 教科書体 N-R",YuGothic,"游ゴシック体","Yu Gothic", "游ゴシック",Arial,"メイリオ", Meiryo, "Hiragino Kaku Gothic Pro",
+        "ヒラギノ角ゴ　ProN", sans-serif;
+        font-weight:500; /* fontの太さが少し濃くなる */
+        color:#333; 
+        background-color:#f6f2e9; /* 背景のカラーの初期設定を無しにしておく */
+    }
+
+    /* 使いまわしのクラス指定 */
+    .inner{
+        max-width:600px;
+        margin:0 auto;     
+    }
+
+    /* ここでinnerクラスをhtmlに記述していく */
+    .flex{
+        display:block;
+        /* justify-content: space-between; */  
+    }
+
+    /* ヘッダーの記述 */
+    header{
+        /* padding:10px 0 5px 0;  */
+        /* 上　右　下　左 */
+        width:100%;
+        display: inline-block;  /* 要素を縦並びにする記述 */
+        text-align:center;
+        position:fixed; 
+        top:0; 
+        left:0; 
+        z-index:1;
+    }
+
+    header h1{
+        display: none;
+    }
+
+    header .insta{
+        display: none;
+    }
+
+    header .title_header{ 
+        margin-top:5px; 
+        /* width:300px;   */
+        margin:0 auto; 
+        text-align: center;  
+    } 
+
+    header .title_header img{
+        width:50%;
+    }
+
+    /* top画像の設定部分 */
+    .mv_photo{
+        text-align: center; 
+        /* padding-top:218px; */
+        position:relative;
+    }
+
+    .mv_photo img{
+        width:100%;
+        height:auto;
+    }
+
+    /* ナビゲーション */
+    nav{
+        /* position:stickyの解除*/
+        position:static;
+        /* top:0; */
+        /* left:0; */
+        /* z-index:1; */
+        height: 100%;
+        overflow: scroll;
+    }
+
+    /* チェックボックスの非表示の設定 */
+    .nav-toggle{
+        display: none;
+    }
+
+    .btn-burger{
+        /* インライン要素をブロック要素にする */
+        display: block;
+        width:44px;
+        height:44px;
+        background: url("../images/burger.png") center center/ 35px 20px no-repeat;
+        /* ハンバーガーメニューを右上に移動させる*/
+        /* 親要素（.header)を基準に絶対配置になっている */
+        position:absolute;
+        top:5px;
+        right:5px;
+        /* z-index　→重なりの制御
+        ボックスの重なり順序を指定するプロパティ
+        数字が大きくなるごとに上になる
+        数字が小さくなるごとに後ろになる */
+        z-index:2;
+        /* マウスポインターの表示を指定（辞書P558） */
+        cursor:pointer;
+        position:fixed;
+
+        }
+
+    /* 辞書P304　checkedの説明
+    チェックボックスにチェックがされたときのスタイルの適用 */
+    /* 辞書p278  要素名A ~ 要素名B
+    要素名Aより後ろに記述された要素Bにスタイルの適用 */
+    .nav-toggle:checked ~.btn-burger{
+        background: url("../images/close.png") center center / 26px 26px no-repeat;
+    }
+
+    /* ナビゲーションの見た目の指定 */
+    /* cover：背景画像にかかる指定
+    設定する要素全体を覆うように自動的に背景画像が広がる */
+    .nav{
+        display:none; 
+        padding-top:20px;
+        background: url("../images/nav_bg.png") center center/cover no-repeat;
+        width: 100%;
+        height:100%;
+        position: fixed;
+    }
+
+    /* リンクメニューの文字を非表示にする指定 */
+    nav ul li{      
+        padding-bottom:0px;
+        /* position:center; */
+        line-height:5;
+        background-color: #c08060;
+        border:none;
+        top:10px;
+        /* bottom:20px; */
+        /* width:640px; */
+        margin:0 auto;   
+    }
+
+    nav ul li:last-child{
+        border-right:none;
+    }
+    
+    .nav_list{
+        /* width:160px; */
+    text-align: center;
+    /* font-size:16px; */
+    line-height:5em;
+    /* border-left:3px solid #bec2ae; */
+    /* border-right:3px solid #bec2ae; */
+    /* border-top:3px solid #bec2ae; */
+    /* border-bottom:3px solid #bec2ae ; */
+    /* background-color:#c08060; */
+    align-items: center;
+    position:sticky; 
+    }
+
+    /* リンクの文字の色を白に変更 */
+    nav ul li a{
+        display:block;
+        color:#fff;
+    }
+
+    nav ul .current{
+        /* display:block; */
+        color:#d6a654; 
+        /* color:#fff; */
+        font-weight:bold ;
+        background-color: #c08060;
+    }
+
+    /* hoverしたときの設定 */
+    nav ul li a:hover{
+        color: #d6a654;
+        transition: all 0.2s;
+    }
+
+    /* メニューが開いたときulを表示する設定 */
+    .nav-toggle:checked ~ .nav{
+        display: block;
+    }
+
+    .mv_photo{
+        margin-top:50px;
+    }
+    
+
+    /* topicsセクション */
+
+    .topics{
+        background-image: url(../images/bg_cloud.png); 
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:200px;
+        margin-top:75px;
+    }
+    
+    .news{
+        text-align: center;
+        padding-top:20px;
+        margin:0 auto;
+        width:50% ;
+    }
+
+    h2{
+        font-size:20px;
+        text-align:center;
+        padding-top:25px;
+        width:100%;
+
+    }
+    
+    .news dl{
+        font-size:14px;
+        padding-bottom: 20px;
+    }
+
+    .news dt{
+        width:40px;
+        margin:0 auto;
+    }
+
+    .news dd{
+        width:200px;
+        margin:0 auto;
+    }
+
+    .read-more{
+        font-size:12px;
+        text-align:center;
+        margin-top:10px; /*上に余白確保*/
+        padding-bottom:10px; /*下に余白確保*/
+        padding-right: 10px;
+    }
+
+    .read-more a{
+        display: inline-block; /*幅と高さの指定をするため*/
+        width: 120px;
+        line-height:28px;
+        text-align: center;
+        font-weight: bold;
+        color:#c08060;
+        background-color: #fff;
+        border:3px solid #c08060;
+        border-radius: 90px;
+        box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+        transition:all 0.3s; /*hoverしたときに3秒後 離すときの設定もつけるために、こちらに書く*/
+    }
+
+    .read-more a:hover{
+        background-color:#c08060;
+        color:#f6f2e9;
+    }
+
+    .read-more a::after{
+        content: "";
+        display: inline-block;
+        width:5px;
+        height:5px;
+        border-top:2px solid #c08060;
+        border-right:2px solid #c08060;
+        margin-left:10px; /**/
+        transform: rotate(45deg);  /* 45度回転させる*/
+    }
+
+    /* recipes セクション */
+    .recipes{
+        margin-top:70px;
+        height:1200px;
+    }
+
+    /* ranking セクション */
+    .ranking{
+        height:1200px;
+        margin-bottom:50px;
+    } 
+
+    /* recipe＆ranking 共通 */
+
+    .text{
+        padding-top:20px;
+        font-size: 14px;
+        text-align:center;
+        padding-bottom:50px;
+    }
+
+    ul.food{
+        width:258px;
+        margin:0 auto;
+    }
+
+    .food a{
+        overflow:hidden;
+   }
+   
+   .food a img:hover{
+       transform:scale(1.1);
+       transition:0.3s;
+   }
+    
+    /* レシピセクションとランキングセクションのボタンの設定 */
+
+    .more{
+        font-size:12px;
+        text-align:center;
+        margin-top:50px; /*上に余白確保*/
+        padding-bottom:20px; /*下に余白確保*/
+        padding-right: 20px;    
+    }
+
+    .more a{
+        display: inline-block; /*幅と高さの指定をするため*/
+        width:203px;
+        line-height:47px;
+        text-align: center;
+        font-weight: bold;
+        color:#c08060;
+        background-color: #fff;
+        border:3px solid #c08060;
+        border-radius: 90px;
+        box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+        transition:all 0.3s; /*hoverしたときに3秒後 離すときの設定もつけるために、こちらに書く*/
+    }
+
+    .more a:hover{
+        background-color:#c08060;
+        color:#f6f2e9;
+    }
+
+    .more a::after{
+        content: "";
+        display: inline-block;
+        width:5px;
+        height:5px;
+        border-top:2px solid #c08060;
+        border-right:2px solid #c08060;
+        margin-left:10px; /**/
+        transform: rotate(45deg);  /* 45度回転させる*/
+    }
+
+    /* footerセクション */
+    footer{
+        padding:45px 0 75px 0;
+    }
+
+    .footer-logo{
+        display: flex;
+        align-items: center;
+    }
+
+    .title{
+        display: none;
+    }
+
+    .logo-footer{
+        text-align: left;
+        /* display: none; */
+        margin-left:20px;
+    }
+
+    /* instagram */
+    .insta{
+        text-align:right;
+        margin-right:40px;
+    }
+
+    .insta span{
+        display: block;
+        margin-bottom:10px;
+        margin-top:20px;
+    }
+
+    .sitemap{
+        margin-top:25px;
+        margin-bottom:25px;
+    }
+
+    footer ul.flex{
+        display: flex;
+    }
+    footer ul li{
+        width:160px;
+        margin:0 auto;
+        text-align: center;
+        font-size:15px;
+        color:#bec2ae;
+        line-height:2em;
+        /* border-left:3px solid #bec2ae; */
+        /* border-right:3px solid #bec2ae; */
+        background-color:#fefefe;
+        align-items: center;
+        margin-bottom:25px;
+    }
+
+    footer ul li:first-child{
+        border-left:none;
+    }
+
+    footer ul li:last-child{
+        border-right:none;
+    }
+
+    .to-top{
+        /* position:fixed; 上にスクロールしてもずっと固定位置のまま設定できる */
+        right:5px;
+        bottom:110px;
+        /* width:50px; */
+    }
+
+}
